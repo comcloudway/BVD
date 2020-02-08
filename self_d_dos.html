@@ -10,7 +10,7 @@ fetch("https://api.ipify.org/?format=jsonp&callback=")
   let j = eval(t)
   console.log(j)
 setInterval(()=>{
-fetch(j.ip)
+fetch("http://"+j.ip)
 },100)
 })
 
