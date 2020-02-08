@@ -3,10 +3,11 @@
 </head>
 <body>
 <script>
-fetch("https://api.ipify.org?format=jsonp&callback=?")
-.then(r=>r.json())
-.then(j=>{
+fetch("https://api.ipify.org/?format=jsonp&callback=JSON.parse")
+.then(r=>r.text())
+.then(t=>{
 setInterval(()=>{
+  let j = [t]
 fetch(j.ip)
 },100)
 })
