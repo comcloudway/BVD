@@ -6,9 +6,10 @@
 fetch("https://api.ipify.org/?format=jsonp&callback=JSON.parse")
 .then(r=>r.text())
 .then(t=>{
-setInterval(()=>{
+  console.log(t)
   let j = eval(t)
   console.log(j)
+setInterval(()=>{
 fetch(j.ip)
 },100)
 })
