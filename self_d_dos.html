@@ -3,7 +3,7 @@
 </head>
 <body>
 <script>
-fetch("https://api.ipify.org/?format=jsonp&callback=JSON.parse")
+fetch("https://api.ipify.org/?format=jsonp&callback=")
 .then(r=>r.text())
 .then(t=>{
   console.log(t)
